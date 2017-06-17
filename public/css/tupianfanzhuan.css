@@ -1,0 +1,83 @@
+/*初始化*/
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+/*设置字体*/
+.content-ul{
+	font-family: Microsoft YaHei;
+	color: black;
+	font-size: 14px;
+}
+/*设置包含图片和文字的div的样式*/
+.content-ul ul li>div{
+	text-align: center;
+	/* padding: 20px; */
+	/*动画元素*/
+	transition:0.6s ease-in-out;
+	-webkit-transition:0.6s ease-in-out;
+	-moz-transition:0.6s ease-in-out;
+}
+.content-ul ul li div:last-of-type{
+	display: table-cell;
+	vertical-align: middle;
+	padding: 20px;
+}
+/*设置最外面的div相对位置*/
+/*舞台（动画元素的父容器）perspective，3D效果*/
+.content-ul{
+	perspective:100%;
+	-webkit-perspective:100%;
+	-moz-pespective:100%;
+	position: relative;
+}
+/*设置li的width,与图片的width保持一致*/
+.content-ul ul li{
+	width: 24%;
+	position: relative;
+	float: left;
+}
+/*设置图片的大小*/
+.content-ul ul li div img{
+	width: 95%;
+	height: 100%;
+}
+/*设置图片的div的相对定位*/
+.content-ul ul li div:first-child{
+	position: relative;
+}
+/*设置文字的背景以及该div的绝对位置*/
+.content-ul ul li div:last-child{
+	background: white;
+	position: absolute;	
+	height: 100%;
+	top: 0px;
+}
+/*设置文字绕Y轴旋转180，并且背面不可见*/
+.content-ul ul li div:last-child{
+	transform: rotateY(-180deg);
+	-webkit-transform:rotateY(-180deg);
+	-moz-transform:rotateY(-180deg);
+	/*设置背面不可见*/
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+}
+/*设置鼠标悬浮时文字旋转至原来的位置*/
+.content-ul ul li:hover div:last-child{
+	transform:rotateY(0deg);
+	-webkit-transform:rotateY(0deg);
+	-moz-transform:rotateY(0deg);
+}
+/*设置鼠标悬浮时图片旋转180*/
+.content-ul ul li:hover div:first-child{
+	transform:rotateY(180deg);
+	-webkit-transform:rotateY(180deg);
+	-moz-transform:rotateY(180deg);
+	/*设置图片背面不可见*/
+	backface-visibility: hidden;
+	-webkit-backface-visibility:hidden;
+	-moz-backface-visibility:hidden;
+}

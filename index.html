@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>journey</title>
+	<link rel="stylesheet" type="text/css" href="public/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="public/css/tupianfanzhuan.css">
+	<link rel="stylesheet" type="text/css" href="public/css/jquery.dialogbox.css">
+	<link rel="stylesheet" type="text/css" href="public/css/index.css">
+	<link rel="stylesheet" type="text/css" href="public/figner/css/flickerplate.css">
+	<script type="text/javascript" src="public/js/jquery-2.0.3.min.js"></script>
+	<!-- seaweed的个人百度地图接口，请勿使用 -->
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=M69eBj0QnTOoNUVtzcVrAq8BfHREESVG"></script>
+	<script type="text/javascript" src="public/js/jq_scroll.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+	  $("#scrollDiv").Scroll({line:1,speed:1000,timer:2500});
+	});
+</script>
+</head>
+<body>
+	<!-- header -->
+	<header id="header" class="">
+		<img src="public/images/logo.jpg" alt="logo">
+		<nav>
+			<ul>
+				<li>当前省份:
+					<select name="">
+						<option value="广东省">广东省</option>
+						<option value="广东省">广西省</option>
+						<option value="广东省">四川省</option>
+						<option value="广东省">青海省</option>
+						<option value="广东省">北京省</option>
+						<option value="广东省">湖南省</option>
+						<option value="广东省">西藏省</option>
+					</select>
+				</li>
+				<li><a href="#" title="首页" class="mya aStyle">首页</a></li>
+				<li><a href="#one" title="省内景点" class="mya">省内景点</a></li>
+				<li><a href="#two" title="国内景点" class="mya">国内景点</a></li>
+				<li><a href="#three" title="国外景点" class="mya">国外景点</a></li>
+			</ul>
+		</nav>
+		<label>
+			<input type="search" name="search" value="" placeholder="请输入你要查找的内容">
+			<i class="icon-search"></i>
+			<a href="#" id="login"><i class="icon-user"></i>Login</a>
+			<i class="icon-chevron-up"></i>
+		</label>
+	</header>
+	<!-- header end -->
+	<!-- container -->
+	<!-- 轮播图 -->
+	<div class="container">
+		<div class="flicker-example" data-block-text="false">
+		  <ul>
+		    <li data-background="public/images/guangzhou.jpg">
+		      <div class="flick-title"><a href="show.html">广州</a></div>
+		      <div class="flick-sub-text">猎德大桥&广州塔</div>
+		    </li>
+		    <li data-background="public/images/tiantan.jpg">
+		      <div class="flick-title"><a href="show.html">北京</a></div>
+		      <div class="flick-sub-text">天坛</div>
+		    </li>
+		    <li data-background="public/images/luoma.jpg">
+		      <div class="flick-title"><a href="show.html">罗马</a></div>
+		      <div class="flick-sub-text">古罗马斗兽场</div>
+		    </li>
+		    <li data-background="public/images/eiffel1.jpg">
+		      <div class="flick-title"><a href="show.html">巴黎</a></div>
+		      <div class="flick-sub-text">埃菲尔铁塔</div>
+		    </li>
+		  </ul>
+		</div>
+	</div>
+	<!-- container end  -->
+	<div id="main">
+		<div id="tside">
+	    <div class="subtitle" id="one">
+	    	<p>
+	    		<span>省内景点</span>
+	    		<span>
+		    		<a href="#">海滩</a>
+		    		<a href="#">踏青</a>
+		    		<a href="#">展馆</a>
+		    		<a href="#">游乐场</a>
+		    		<a href="#">文化古迹</a>
+		    		<a href="#">动植物园</a>
+		    		<a href="#">古镇村落</a>
+	    		</span>
+	    		<small>查看更多<i class="icon-chevron-right"></i></small>
+	    	</p>
+		  </div>
+			<div class="content-ul">
+				<ul>
+					<li>
+						<div>
+							<img src="public/images/danxiashan.jpg" alt="">
+						</div>
+						<div>
+						<p>
+						【丹霞】全球首批世界地质公园，含最丰富的丹霞地貌，色如渥丹，灿若明霞，赤壁丹崖。
+						</p>
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="public/images/xianggang.jpg" alt="">
+						</div>
+						<div>
+							<p>南澳岛是广东省汕头市下辖的唯一海岛县，南澳岛污染少，空气清新，海产肥美；民风淳朴，生活节奏慢，是来自都市的旅游者绝佳的休闲放松之地。</p>
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="public/images/nankunshan.jpg" alt="">
+						</div>
+						<div>
+							<p>南昆山境内重峦叠嶂，古树参天,青竹遍野，24万亩原始森林，6万亩连绵竹海身临其境无不令人心旷神怡。</p>
+						</div>
+					</li> 
+					<li>
+						<div>
+							<img src="public/images/miaowandao.jpg" alt="">
+						</div>
+						<div>
+							<p>庙湾岛是海洋生物繁殖的理想之所，海产丰富，乃东南亚享负盛名的垂钓区，海洋资源丰富，被称为“梦幻之岛”和“中国的马尔代夫”。</p>
+						</div>
+					</li> 
+				</ul>
+			</div>
+		</div>
+		<div class="clearFloat"></div>
+		<div id="cside">
+			<div class="subtitle" id="two">
+	    	<p>
+	    		<span>国内景点</span>
+	    		<span>
+		    		<a href="#">历史名城</a>
+		    		<a href="#">时尚都市</a>
+		    		<a href="#">美食天下</a>
+		    		<a href="#">民俗特色</a>
+	    		</span>
+	    		<small>查看更多<i class="icon-chevron-right"></i></small>
+	    	</p>
+		  </div>
+			<div class="three1">
+				<img src="public/images/guangzhou.jpg"/>
+				<li>广州</li>
+			</div>
+			<div class="three1">
+				<img src="public/images/sanya.jpg"/>
+				<li>三亚</li>
+			</div>
+			<div class="three1">
+				<img src="public/images/qingdao.jpg"/>
+				<li>青岛</li>
+			</div>
+			<div class="three1">
+				<img src="public/images/xizang.jpg"/>
+				<li>西藏</li>
+			</div>
+		</div>
+	<div class="clearFloat"></div>
+		<div id="dside">
+			<div class="subtitle" id="three">
+	    	<p>
+	    		<span>国外景点</span>
+	    		<span>
+		    		<a href="#">欧洲</a>
+		    		<a href="#">南美洲</a>
+		    		<a href="#">北美洲</a>
+		    		<a href="#">澳洲</a>
+	    		</span>
+	    		<small>查看更多<i class="icon-chevron-right"></i></small>
+	    	</p>
+		  </div>
+			<div class="three1">
+				<img src="public/images/bingdao.jpg" alt=""/>
+				<li>冰岛</li>
+			</div>
+			<div class="three1">
+				<img src="public/images/baliluofugong.jpg" alt=""/>
+				<li>巴黎</li>
+			</div>
+			<div class="three1">
+				<img src="public/images/lundun.jpg" alt=""/>
+				<li>伦敦</li>
+			</div>
+			<div class="three1">
+				<img src="public/images/luoma.jpg" alt=""/>
+				<li>罗马</li>
+			</div>
+		</div>
+	  </div>
+		<div id="rside">
+			<h1>背包客日记</h1><br>
+			<div id="scrollDiv">
+				<ul >
+					<li class="linktit">
+						<img src="public/images/aifeier.jpg" alt=""/>
+						<a href="#">徒步西藏|朝拜圣湖玛旁雍错，快收下这个攻略</a>
+					</li>
+					<li class="linktit">
+						<img src="public/images/baliluofugong.jpg" alt=""/>
+						<a href="#">走进“小西藏”甘南丨让生命感受自由，寻找佛的驻地</a>
+					</li>
+					<li class="linktit">
+						<img src="public/images/xianggang.jpg" alt=""/>
+						<a href="#">徒步武功山丨枕着云海看星辰，四月滑草赏杜鹃</a>
+					</li>
+					<li class="linktit">
+						<img src="public/images/user.jpg" alt=""/>
+						<a href="#">仅有24人成功登顶，登山死亡率超过珠峰丨蜀山之王贡嘎徒步攻略</a>
+					</li>
+					<li class="linktit">
+						<img src="public/images/new_8.jpg" alt=""/>
+						<a href="#">转山冈仁波齐详尽攻略丨一座跨宗教、跨国界、跨种族的神山，世界的中心</a>
+					</li>
+					<li class="linktit">
+						<img src="public/images/user.jpg" alt=""/>
+						<a href="#">四姑娘山攀登攻略丨在所有人事已非的景色里，我最喜欢你</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="guanzhu">
+			<h2>关注我们</h2>
+			<div>
+				<img src="public/images/weibo.jpg" alt="">
+				<img src="public/images/weixin.jpg" alt="">
+			</div>
+		</div>
+		<div class="map">
+		<h2>我们在这</h2>
+			<div id="allmap"></div>
+		</div>
+	</div>
+	<!-- footer -->
+	<div class="clearFloat"></div>
+  <div id="footer">
+    <p>
+       <a href="#">网站地图</a>
+       <a href="#">合作伙伴</a>
+       <a href="#">友情链接</a>
+       <a href="#">商业合作</a>
+       <a href="#">在线咨询</a>
+     </p>
+    <span>&copy;2006-2009  广州市四月天文化传播有限公司 版权所有 </span>
+    <a href="#" title="灵犀科技—专业网站介绍">http://www.April.com</a> 
+    <span>粤ICP备07020337号</span>
+  </div>
+  <div id="showLogin"></div>
+  <div id="showLogin1" style="display: none;">
+  	<table class="mytable">
+			<tr>
+				<td>用户名</td><td><input type="text" name="username" value=""></td>
+			<tr>
+			</tr>
+				<td>密码</td><td><input type="password" name="password" value=""></td>
+			</tr>
+			</tr>
+				<td colspan="2" class="zhuce"><small>还没有账号？去注册。</small></td>
+			</tr>
+  	</table>
+  </div>
+</body>
+<!-- 轮播图 -->
+
+	<script type="text/javascript" src="public/figner/js/min/modernizr-custom-v2.7.1.min.js"></script>
+	<script type="text/javascript" src="public/figner/js/min/jquery-finger-v0.1.0.min.js"></script>
+	<script type="text/javascript" src="public/figner/js/min/flickerplate.min.js"></script>
+	<script type="text/javascript" src="public/js/jquery.dialogBox.js"></script>
+	<script type="text/javascript" src="public/js/scrollMeun.js"></script>
+	<script type="text/javascript" src="public/js/login.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.flicker-example').flicker();
+		});
+	</script>
+	<script type="text/javascript">
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");    // 创建Map实例
+    map.centerAndZoom(new BMap.Point(113.30764968,23.1200491), 11);  // 初始化地图,设置中心点坐标和地图级别
+    map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+    map.setCurrentCity("广州市");          // 设置地图显示的城市 此项是必须设置的
+    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+    function getPoint1(addr){
+			// 创建地址解析器实例
+			let myGeo = new BMap.Geocoder();
+			// 将地址解析结果显示在地图上,并调整地图视野
+			myGeo.getPoint(addr, function(point){
+				if (point) {
+					map.centerAndZoom(point, 16);
+					map.addOverlay(new BMap.Marker(point));
+				}else{
+					alert("您选择地址没有解析到结果!");
+				}
+			}, "广东省");
+		}
+		getPoint1("广东省广州市天河区中山大道西293号");
+
+</script>
+</html>

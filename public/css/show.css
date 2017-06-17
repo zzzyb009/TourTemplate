@@ -1,0 +1,360 @@
+/*
+* @Author: zyb
+* @Date:   2017-04-19 18:51:17
+* @Last Modified by:   zyb
+* @Last Modified time: 2017-04-20 21:43:11
+*/
+
+/* 初始化标签样式 */
+html, body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, nav,  ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, a, span, select, option { 
+	margin:0; padding:0; text-decoration: none;list-style: none;font-family: 'Microsoft Yahei';
+}
+/* body */
+body{
+	background: #EFF3F5;
+	min-width: 950px;
+}
+/* header */
+header {
+	height:70px;
+	background: rgba(0, 0, 0, 0);
+	line-height: 70px;
+	font-size: 14px;
+	position: fixed;
+	width: 100%;
+	min-width: 950px;
+	z-index: 99999;
+	transition: all .3s linear;	
+}
+header:hover{
+	background: white;
+}
+.headerWhite{
+	transition: all .35s linear;	
+	background: white;
+}
+/* 当前位置 */
+header nav ul li select {
+	width: auto;
+	border: none;
+	outline: none;
+	height: 40px;
+	border: 1px solid rgba(0, 0, 0, 0);
+	background: rgba(0, 0, 0, 0)
+}
+header nav ul li select:hover {
+	transition: all .2s linear;
+	border-right: 1px solid lightgray;
+	border-left: 1px solid lightgray;
+}
+header img {
+	margin-top: 10px;
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	float: left;
+	border-radius: 50%;
+	margin-left: 8%;
+}
+/* 分类 */
+header ul {
+	float: left;
+	margin-left:3%;
+}
+header nav ul li {
+	float: left;
+	line-height: 70px;
+}
+header nav ul li:first-of-type{
+	padding: 0 15px 0 15px;
+}
+header nav ul li a {
+	color: black;
+	padding: 0 15px 0 15px;
+	border-right: 1px solid rgba(0, 0, 0, 0);
+	border-left: 1px solid rgba(0, 0, 0, 0);
+	border-top: 5px solid rgba(0, 0, 0, 0);
+	height: 65px;
+	display: inline-block;
+	line-height: 60px;
+}
+header nav ul li a:hover {
+	transition: all .25s linear;
+	border-top: 5px solid #3498db;
+	border-right: 1px solid lightgray;
+	border-left: 1px solid lightgray;
+}
+/* 搜索及登录 */
+header label{
+	line-height: 70px;
+	float: right;
+	margin-right: 8%;
+}
+header label input[type=search]{
+	border: 1px solid rgba(0, 0, 0, 0);
+	outline: none;
+	height: 40px;
+	text-indent: 5px;
+	background: rgba(0, 0, 0, 0);
+}
+header label input[type=search]:focus{
+	transition: all .2s linear;
+	border-left: 1px solid lightgray;
+	border-right: 1px solid lightgray;
+}
+header label .icon-search,header label .icon-chevron-up{
+	color: white;
+	display: inline-block;
+	padding: 13px;
+	border-radius: 50%;
+	background: lightsteelblue;
+	cursor: pointer;
+}
+header label .icon-search:hover{
+	transition: all .2s linear;
+	background: #3498db;
+	/* color: #3498db; */
+}
+header label #login{
+	height: 65px;
+	line-height: 65px;
+	color: #3498db;
+	display: inline-block;
+	border-right: 1px solid rgba(0, 0, 0, 0);
+	border-left: 1px solid rgba(0, 0, 0, 0);
+	border-top: 5px solid rgba(0, 0, 0, 0);
+	padding: 0 15px 0 15px;
+}
+header label #login:hover{
+	transition: all .25s linear;
+	border-top: 5px solid #3498db;
+	border-right: 1px solid lightgray;
+	border-left: 1px solid lightgray;
+}
+/* class info */
+.info{
+	padding: 15px;
+	font-family: arial,"Microsoft Yahei";
+}
+.info p{
+	padding: 10px;
+	font-size: 14px;
+}
+.info p:first-of-type{
+	font-size: 24px;
+	padding: 15px;
+}
+/* 图片缩略图 */
+.imgs{
+	padding: 10px 20px 0px 20px;
+	font-size: 12px;
+}
+.imgs .icon-hand-left{
+	color: white;
+	border-radius: 50%;
+	padding: 3px;
+	background:yellowgreen; 
+}
+.imgs a img{
+	padding: 0 5px 0 5px;
+	width: 5%;
+	cursor: pointer;
+	transition: all .25s linear;
+}
+.imgs a img:hover{
+	transform:scale(1.1);
+}
+/* 视觉差 */
+/* 第一张图 */
+.article0 {
+	position: relative;
+	width: 100%;
+	height: 700px;
+	overflow: hidden;
+}
+.article0 img {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+/* 第一张图上的额文章 */
+.article0 div {
+	opacity: 0;
+	padding: 15px;
+	position: absolute;
+	top: 150px;
+	width: 300px;
+	left: 100px;
+	text-transform: uppercase;
+	color: black;
+	font-size: 20px;
+	background: rgba(255, 255, 255, 0.5);
+}
+.article0 div p:first-of-type{
+	border-bottom: 1px solid gray;
+}
+.article0 div p:last-of-type{
+	font-size: 14px;
+}
+
+/* 第二张 */
+.article1{
+	position: relative;
+	width: 100%;
+	height:700px;
+	overflow: hidden;
+}
+.article1 img {
+	width: 110%;
+	position: absolute;
+	top: 0px;
+	left: -100px;
+}
+/* 第二张图的文字 */
+.article1 div {
+	opacity: 0;
+	padding: 15px;
+	position: absolute;
+	top: 150px;
+	width: 300px;
+	left: 150px;
+	text-transform: uppercase;
+	color: black;
+	font-size: 20px;
+	background: rgba(255, 255, 255, 0.5);
+}
+.article1 div p:first-of-type{
+	border-bottom: 1px solid gray;
+}
+.article1 div p:last-of-type{
+	font-size: 14px;
+}
+/* 第三张 */
+.article2{
+	position: relative;
+	width: 100%;
+	height:700px;
+	overflow: hidden;
+}
+.article2 img {
+	width: 100%;
+	position: absolute;
+	top: -150px;
+	left: 0px;
+}
+/* 第二张图的文字 */
+.article2 div {
+	opacity: 0;
+	padding: 15px;
+	position: absolute;
+	top: 150px;
+	width: 300px;
+	left: 150px;
+	text-transform: uppercase;
+	color: black;
+	font-size: 20px;
+	background: rgba(255, 255, 255, 0.5);
+}
+.article2 div p:first-of-type{
+	border-bottom: 1px solid gray;
+}
+.article2 div p:last-of-type{
+	font-size: 14px;
+}
+/* 了解更多 */
+.up{
+	display: flex;
+	height: 400px;
+	align-items: center;
+	position: relative;
+	/* top: -100px; */
+}
+.group{
+	width: 100%;
+	height: 200px;
+	position: absolute;
+	z-index: 99;
+	background: url(../images/more.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
+	transition:  all .25s linear;
+	cursor: pointer;
+	display: none;
+}
+.words{
+	cursor: pointer;
+	position: absolute;
+	z-index: 500;
+	width: 100%;
+	padding: 20px 0 20px 0;
+	height: 200px;
+	transition: all .25s linear;
+	background: rgba(255, 255, 255, 0.5)
+}
+.changeheight{
+	height: 400px;
+}
+.words p{
+	text-align: center;
+	width: 80%;
+	margin: 20px auto;
+	color: black;
+}
+.words p:first-of-type{
+	margin-top: 50px;
+	font-size: 20px;
+}
+.words p:last-of-type{
+	font-size: 24px;
+}
+/* footer */
+footer{
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	font-size: 14px;
+  color: #979797;
+  background: white;
+  /* padding: 20px; */
+}
+footer p{
+	text-align: center;
+}
+footer p a{
+	padding: 10px;
+	display: inline-block;
+}
+footer p a:hover{
+	color: skyblue;
+}
+footer a{
+	color:gray;
+}
+footer li a:hover{
+	color:#0072E3;
+}
+/* login */
+.mytable{
+	width: 100%;
+	border: none;
+}
+.mytable tr td:first-child{
+	text-align: center;
+	padding:5px 0 5px 0; 
+	width: 20%;
+	height: 30px;
+}
+.mytable tr td:last-child{
+	width: 80%;
+	height: 30px;
+}
+.mytable tr td input{
+	width: 100%;
+	height: 26px;
+	border: 1px solid skyblue;
+	border-radius: 13px;
+	outline: none;
+	text-indent: 15px;
+}
